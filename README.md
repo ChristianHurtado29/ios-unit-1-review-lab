@@ -152,13 +152,23 @@ fred.name = "Brick"
 fred.weight = 999.2
 fred.homePlanet = "Mars"
 ```
+Answer:
+```
+the first code will not compile because homePlanet was initialized with a let and those are constants and unchageable.
+
+var homePlanet: String
+
+```
 
 b. Using the Giant class. What will the value of `edgar.name` be after the code below runs? How about `jason.name`? Explain why.
-
-```swift
+Answer:
+```
+swift
 let edgar = Giant(name: "Edgar", weight: 520.0, homePlanet: "Earth")
 let jason = edgar
 jason.name = "Jason"
+
+The value of edgar.name will be "Jason" because the values are passed down instead of referenced, so each time there is a variable changing the original property, it's changing them for all instances. jason.name will be "Jason"
 ```
 
 ## Question 7
