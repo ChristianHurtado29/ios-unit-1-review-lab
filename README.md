@@ -180,11 +180,39 @@ struct BankAccount {
 
 a. Explain why the code above doesn't compile, then fix it.
 
+Answer:
+```
+in order to change the properties of a struct with a method, it has to be a mutating method
+```
 b. Add a property called `deposits` of type `[Double]` that stores all of the deposits made to the bank account
+
+Answer:
+```
+var deposits = [0.0]
+
+mutating func deposit(_ amount: Double) {
+    balance += amount
+    deposits.append(balance)
+}
+```
 
 c. Add a property called `withdraws` of type `[Double]` that stores all of the withdraws made to the bank account
 
+Answer:
+```
+var withdraws = [0.0]
+mutating func withdraw(_ amount: Double) {
+    balance -= amount
+    withdraws.append(balance)
+}
+
+```
 d. Add a property called `startingBalance`.  Have this property be set to the original balance, and don't allow anyone to change it
+
+Answer:
+```
+private var startingBal: Double { didSet {startingBal = balance}}
+```
 
 e. Add a method called `totalGrowth` that returns a double representing the change in the balance from the starting balance to the current balance
 
