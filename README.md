@@ -207,8 +207,43 @@ House Targaryen - Fire and Blood
 
 House Lannister - A Lannister always pays his debts
 ```
+Answer:
+```
+func rightThrone(house: GameOfThronesHouse) {
+    switch house{
+    case .stark:
+       print("Winter is coming")
+    case .baratheon:
+        print("Ours is the fury")
+    case . lannister:
+        print("A Lannister always pays his debts")
+    case .targaryen:
+        print("Fire and Blood")
+    }
+}
+```
 
 b. Move that function to inside the enum as a method
+Answer:
+```
+enum GameOfThronesHouse: String {
+    case stark, lannister, targaryen, baratheon
+    
+    func rightThrone() {
+        switch self{
+        case .stark:
+           print("Winter is coming")
+        case .baratheon:
+            print("Ours is the fury")
+        case . lannister:
+            print("A Lannister always pays his debts")
+        case .targaryen:
+            print("Fire and Blood")
+        }
+    }
+
+}
+```
 
 ## Question 9
 
