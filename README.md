@@ -124,8 +124,17 @@ struct ReceiptItem {
 ```
 
 a. Given the structs above, add a method to `Receipt` that returns the total cost of all items
-
+```
+func totalCost(_ totalItems: [Double]) -> Double {
+  let allCost = totalItems.reduce(0,+)
+  return allCost
+  }
+```
 b. Write a function that takes in an array of `Receipts` and returns an array of `Receipts` that match a given store name
+
+```
+
+```
 
 c. Write a function that takes in an array of `Receipts` and returns an array of those receipts sorted by price
 
