@@ -215,7 +215,12 @@ private var startingBal: Double { didSet {startingBal = balance}}
 ```
 
 e. Add a method called `totalGrowth` that returns a double representing the change in the balance from the starting balance to the current balance
-
+```
+mutating func totalGrowth()->Double{
+    let change:Double = startingBal - balance
+    return change
+}
+```
 ## Question 8
 
 ```swift
